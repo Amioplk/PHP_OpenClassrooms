@@ -18,13 +18,23 @@
         <h1>Ajoutez votre propre recette !</h1>
         <form action="submit_contribution.php" method="POST">
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label for="title" class="form-label">Titre de votre recette</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">La descritpion de votre recette</label>
+                <textarea class="form-control" placeholder="Soyez complets" id="message" name="message"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Votre adresse email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help">
                 <div id="email-help" class="form-text">Nous ne revendrons pas votre email.</div>
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Votre message</label>
-                <textarea class="form-control" placeholder="Exprimez vous" id="message" name="message"></textarea>
+                <p>Voulez-vous rendre votre recette accessible à tout le monde ?<br>
+                    <input type="radio" value='yes' name="enabled" id="enabled_yes"> <label for="enabled_yes">Oui</label><br>
+                    <input type="radio" value='no' name="enabled" id="enabled_no"> <label for="enabled_no">Non</label><br>
+                </p>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
