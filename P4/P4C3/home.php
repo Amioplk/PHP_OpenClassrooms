@@ -20,15 +20,16 @@
     <!-- Formulaire de connexion -->
     <?php include_once('login.php'); ?>
         <h1>Site de Recettes !</h1>
-
-        <!-- Plus facile à lire -->
-        <?php foreach(get_recipes($recipes, $limit) as $recipe) : ?>
-            <article>
-                <h3><?php echo($recipe['title']); ?></h3>
-                <div><?php echo($recipe['recipe']); ?></div>
-                <i><?php echo(display_author($recipe['author'], $users)); ?></i>
-            </article>
-        <?php endforeach ?>
+        <?php if(isset($loggedUser)) : ?>
+            <!-- Plus facile à lire -->
+            <?php foreach(get_recipes($recipes, $limit) as $recipe) : ?>
+                <article>
+                    <h3><?php echo($recipe['title']); ?></h3>
+                    <div><?php echo($recipe['recipe']); ?></div>
+                    <i><?php echo(display_author($recipe['author'], $users)); ?></i>
+                </article>
+            <?php endforeach ?>
+        <?php endif;?>
     </div>
 
     <?php include_once('footer.php'); ?>
