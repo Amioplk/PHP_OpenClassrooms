@@ -32,8 +32,8 @@
             </div>
             <div class="mb-3">
                 <p>Voulez-vous rendre votre recette accessible à tout le monde ?<br>
-                    <input type="radio" value='yes' name="enabled" id="enabled_yes"> <label for="enabled_yes">Oui</label><br>
-                    <input type="radio" value='no' name="enabled" id="enabled_no"> <label for="enabled_no">Non</label><br>
+                    <input type="radio" value='1' name="enabled" id="enabled_yes"> <label for="enabled_yes">Oui</label><br>
+                    <input type="radio" value='0' name="enabled" id="enabled_no"> <label for="enabled_no">Non</label><br>
                 </p>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
