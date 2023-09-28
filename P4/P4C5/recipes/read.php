@@ -14,7 +14,8 @@ if (!isset($getData['id']) && is_numeric($getData['id']))
 
 $recipeId = $getData['id'];
 
-$retrieveRecipeWithCommentsStatement = $mysqlClient->prepare('SELECT * FROM recipes r LEFT JOIN comments c on r.recipe_id = c.recipe_id WHERE r.recipe_id = :id ');
+$retrieveRecipeWithCommentsStatement = $mysqlClient->prepare('SELECT r.*, c.comment_id, c.comment, c.user_id FROM recipes r LEFT JOIN comments c on r.recipe_id = c.recipe_id WHERE r.recipe_id = :id ');
+// !!! Attention aux colonnes avec le même nom ! ça m'a posé des problèmes...
 $retrieveRecipeWithCommentsStatement->execute([
     'id' => $recipeId,
 ]);
