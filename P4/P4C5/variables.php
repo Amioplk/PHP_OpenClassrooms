@@ -22,5 +22,5 @@ if (isset($_COOKIE['LOGGED_USER']) || isset($_SESSION['LOGGED_USER'])) {
     ];
 }
 
-$rootPath = $_SERVER['DOCUMENT_ROOT'];
-$rootUrl = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+$rootPath="C:/MAMP/htdocs/Concevez-votre-site-web-avec-PHP-MySQL/P4/P4C5";
+$rootUrl = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . "localhost/Concevez-votre-site-web-avec-PHP-MySQL/P4/P4C5/";
